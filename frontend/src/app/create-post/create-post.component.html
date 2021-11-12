@@ -1,0 +1,23 @@
+<!-- Crear contenido de html del componente create-post-->
+
+<form (submit)="addPost(postForm)" #postForm="ngForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Title</mat-label>
+    <input type="text" matInput ngModel title="ngModel" name="title" required />
+    <mat-error>{{getError()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Summary</mat-label>
+    <input type="text" matInput ngModel Summary="ngModel"name="summary"/>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Content</mat-label>
+    <textarea matInput ngModel content="ngModel" name="content" required ></textarea>
+    <mat-error>{{getError()}}</mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">Save</button>
+
+</form>
